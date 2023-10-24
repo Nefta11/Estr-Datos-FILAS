@@ -53,4 +53,19 @@ public class Lista {
 
         return elementoEliminado;
     }
+
+    public int eliminarFinal(){
+        int e = fin.dato;
+        if (inicio==fin){
+            inicio = fin =null;
+        }else{
+            Nodo recorrer= inicio;
+            while(recorrer.siguiente != fin){// no tiene que apuntar a null si no a fin..
+                recorrer =recorrer.siguiente;
+            }
+            fin=recorrer;
+            fin.siguiente=null;
+        }
+        return e;
+    }
 }
