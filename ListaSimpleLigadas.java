@@ -6,7 +6,7 @@ public class ListaSimpleLigadas {
         int opcion = 0, elemento;
         do {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "1. Agregar un dato al inicio\n2. Mostrar todos los datos de la lista\n3. Ingresar un dato al final\n4. Eliminar nodo al inicio\n5. Salir"));
+                    "1. Agregar un dato al inicio\n2. Mostrar todos los datos de la lista\n3. Ingresar un dato al final\n4. Eliminar nodo al inicio\n5. Eliminar nodo al final\n6. Salir"));
             switch (opcion) {
                 case 1:
                     elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento"));
@@ -25,7 +25,13 @@ public class ListaSimpleLigadas {
                         JOptionPane.showMessageDialog(null, "Se ha eliminado el nodo al inicio con elemento: " + elementoEliminado);
                     }
                     break;
-                case 5:
+                    case 5:
+                    int e = lsl.eliminarFinal();
+                    if (e != -1) {
+                        JOptionPane.showMessageDialog(null, "Se ha eliminado el nodo al fin con elemento: " + e);
+                    }
+                    break;
+                case 6:
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opción Incorrecta");
@@ -34,3 +40,5 @@ public class ListaSimpleLigadas {
         } while (opcion != 5);
     }
 }
+
+//Tarea crear algoritmo para eliminar un elemento n 
