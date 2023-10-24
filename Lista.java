@@ -24,7 +24,6 @@ public class Lista {
         } else {
             inicio = fin = new Nodo(e);
         }
-
     }
 
     public void mostrarLista() {
@@ -54,18 +53,46 @@ public class Lista {
         return elementoEliminado;
     }
 
-    public int eliminarFinal(){
+    public int eliminarFinal() {
         int e = fin.dato;
-        if (inicio==fin){
-            inicio = fin =null;
-        }else{
-            Nodo recorrer= inicio;
-            while(recorrer.siguiente != fin){// no tiene que apuntar a null si no a fin..
-                recorrer =recorrer.siguiente;
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else {
+            Nodo recorrer = inicio;
+            while (recorrer.siguiente != fin) {
+                recorrer = recorrer.siguiente;
             }
-            fin=recorrer;
-            fin.siguiente=null;
+            fin = recorrer;
+            fin.siguiente = null;
         }
         return e;
+    }
+
+    public boolean eliminarElemento(int elemento) {
+        if (vacia()) {
+            System.out.println("La lista está vacía. No se puede eliminar un elemento.");
+            return false;
+        }
+
+        if (inicio.dato == elemento) {
+            eliminarInicio();
+            return true;
+        }
+
+        Nodo actual = inicio;
+        Nodo anterior = null;
+
+        while (actual != null && actual.dato != elemento) {
+            anterior = actual;
+            actual = actual.siguiente;
+        }
+
+        if (actual == null) {
+            System.out.println("El elemento no se encontró en la lista.");
+            return false;
+        }
+
+        anterior.siguiente = actual.siguiente;
+        return true;
     }
 }
