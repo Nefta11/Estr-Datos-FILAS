@@ -96,3 +96,15 @@ public class Lista {
         return true;
     }
 }
+
+
+/*1. Si la lista está vacía, retornar false.
+2. Si el elemento a eliminar es el primer elemento, eliminar el primer elemento y retornar true.
+3. Inicializar un nodo actual apuntando al inicio de la lista y otro nodo anterior inicializado como nulo.
+4. Mientras el nodo actual no sea nulo y el valor del nodo actual no coincida con el elemento a eliminar:
+   a. Actualizar el nodo anterior como el nodo actual.
+   b. Actualizar el nodo actual como el siguiente nodo en la lista.
+5. Si el nodo actual es nulo, mostrar un mensaje de error y retornar false.
+6. Si se encontró el elemento, ajustar los enlaces del nodo anterior para eliminar el elemento.
+7. Retornar true para indicar que el elemento fue eliminado con éxito.
+ */
