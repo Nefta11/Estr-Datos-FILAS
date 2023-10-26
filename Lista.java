@@ -108,3 +108,24 @@ public class Lista {
 6. Si se encontró el elemento, ajustar los enlaces del nodo anterior para eliminar el elemento.
 7. Retornar true para indicar que el elemento fue eliminado con éxito.
  */
+
+
+ /*
+    Algoritmo para eliminar un nodo en particular
+    1. Si la lista No está vacía , entonces:
+    a. Si inicio es igual a fin, y , el elemento es igual a dato de inicio, entonces:
+        a.q apuntar inicio y fin a nulo.
+    b. Si no, si el elemento es igual a dato de inicio, entonces:
+        b.1 apuntar inicio a siguiente de inicio
+    c. si no
+        c.1 crear dos nodos: anterior y temporal
+        c.2 apuntar anterior a inicio
+        c3. apuntar temporal a siguiente de inicio
+        c4. mientras temporal sea diferente de nulo y dato de temporal sea diferente de elemnto, entonces
+            c4.1 apuntar anterior a siguiente de anterior
+            c4.2 apuntar a temporal a siguiente de temporal
+        c5 si temporal es diferente de nulo, entonces
+            c.5.1 apuntar siguiente de anterior a siguiente de temporal
+            c5.2 si temporal es igual fin, entonces
+                c5.2.1 apuntar fin a anterior
+  */
