@@ -8,6 +8,7 @@ public class Lista {
 
     public boolean vacia() {
         return inicio == null;
+        
     }
 
     public void insertaInicio(int e) {
@@ -31,7 +32,7 @@ public class Lista {
         Nodo recorrido = inicio;
 
         while (recorrido != null) {
-            System.out.print("[" + recorrido.dato + "]-->");
+            //System.out.print("[" + recorrido.dato + "]-->");
             recorrido = recorrido.siguiente;
         }
     }
@@ -67,6 +68,17 @@ public class Lista {
         }
         return e;
     }
+    /*1. Si la lista está vacía, retornar false.
+2. Si el elemento a eliminar es el primer elemento, eliminar el primer elemento y retornar true.
+3. Inicializar un nodo actual apuntando al inicio de la lista y otro nodo anterior inicializado como nulo.
+4. Mientras el nodo actual no sea nulo y el valor del nodo actual no coincida con el elemento a eliminar:
+   a. Actualizar el nodo anterior como el nodo actual.
+   b. Actualizar el nodo actual como el siguiente nodo en la lista.
+5. Si el nodo actual es nulo, mostrar un mensaje de error y retornar false.
+6. Si se encontró el elemento, ajustar los enlaces del nodo anterior para eliminar el elemento.
+7. Retornar true para indicar que el elemento fue eliminado con éxito.
+ */
+
 
     public boolean eliminarElemento(int elemento) {
         if (vacia()) {
@@ -95,19 +107,52 @@ public class Lista {
         anterior.siguiente = actual.siguiente;
         return true;
     }
+
+
+    public void encontrarDato(int e) {
+        System.out.println("");
+        Nodo recorrido = inicio;
+
+        while (recorrido.dato != e || recorrido!= null) {
+            //System.out.print("[" + recorrido.dato + "]-->");
+            recorrido = recorrido.siguiente;
+        }
+        if(recorrido.dato == e){
+            System.out.println("El dato"+ e +" Existe");
+        }else{
+            System.out.println("El dato"+e+" no existe");
+        }
+    }
+
+
 }
 
 
-/*1. Si la lista está vacía, retornar false.
-2. Si el elemento a eliminar es el primer elemento, eliminar el primer elemento y retornar true.
-3. Inicializar un nodo actual apuntando al inicio de la lista y otro nodo anterior inicializado como nulo.
-4. Mientras el nodo actual no sea nulo y el valor del nodo actual no coincida con el elemento a eliminar:
-   a. Actualizar el nodo anterior como el nodo actual.
-   b. Actualizar el nodo actual como el siguiente nodo en la lista.
-5. Si el nodo actual es nulo, mostrar un mensaje de error y retornar false.
-6. Si se encontró el elemento, ajustar los enlaces del nodo anterior para eliminar el elemento.
-7. Retornar true para indicar que el elemento fue eliminado con éxito.
- */
+
+
+/*
+public int eliminadoNodo(int e){
+    if(!listaVacia()){
+        if(inicio==fin && e == inicio.dato){
+            inicio = fin = null;
+        }
+        else if (e=inicio.dato){
+            inicio=inicio.siguiente;
+        }
+        else{
+            Nodo anterior, temporal;
+            anterior=inicio;
+            temporal=inicio.temporal.siguiente;
+        }
+        if(temporal !=null){
+            anterior.siguiente = temporal.siguiente;
+            if(temporal==fin)
+
+        }
+    }
+}
+*/
+
 
 
  /*
