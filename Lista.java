@@ -131,26 +131,23 @@ public class Lista {
 
 
 /*
-public int eliminadoNodo(int e){
-    if(!listaVacia()){
-        if(inicio==fin && e == inicio.dato){
-            inicio = fin = null;
+public void encontrarElemento(int e) {
+        nodo recorrido = inicio;
+        int contador = 1;
+        while (recorrido != null) {
+            if (recorrido.dato == e) {
+                System.out.println("El elemento " + e + " se encuentra en la posicion: " + contador);
+                break;
+            } else {
+                contador++;
+                recorrido = recorrido.direccion;
+            }
         }
-        else if (e=inicio.dato){
-            inicio=inicio.siguiente;
-        }
-        else{
-            Nodo anterior, temporal;
-            anterior=inicio;
-            temporal=inicio.temporal.siguiente;
-        }
-        if(temporal !=null){
-            anterior.siguiente = temporal.siguiente;
-            if(temporal==fin)
+        if (recorrido == null) {
+            System.out.println("No existe el elemento");
+        }
 
-        }
-    }
-}
+    }
 */
 
 
