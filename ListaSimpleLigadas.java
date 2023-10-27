@@ -34,6 +34,7 @@ public class ListaSimpleLigadas {
                 case 6:
                     elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresar el elemento a eliminar"));
                     boolean eliminado = lsl.eliminarElemento(elemento);
+                    lsl.mostrarLista();
                     if (eliminado) {
                         JOptionPane.showMessageDialog(null, "Se ha eliminado el elemento: " + elemento);
                     } else {

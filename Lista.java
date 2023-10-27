@@ -32,7 +32,7 @@ public class Lista {
         Nodo recorrido = inicio;
 
         while (recorrido != null) {
-            //System.out.print("[" + recorrido.dato + "]-->");
+            System.out.print("[" + recorrido.dato + "]-->");
             recorrido = recorrido.siguiente;
         }
     }
@@ -109,7 +109,7 @@ public class Lista {
     }
 
 
-    public void encontrarDato(int e) {
+   /*  public void encontrarDato(int e) {
         System.out.println("");
         Nodo recorrido = inicio;
 
@@ -122,7 +122,7 @@ public class Lista {
         }else{
             System.out.println("El dato"+e+" no existe");
         }
-    }
+    }*/
 
 
 }
