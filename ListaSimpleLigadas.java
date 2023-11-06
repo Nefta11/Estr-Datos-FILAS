@@ -1,5 +1,6 @@
 import javax.swing.JOptionPane;
 
+
 public class ListaSimpleLigadas {
     public static void main(String[] args) {
         Lista lsl = new Lista();
